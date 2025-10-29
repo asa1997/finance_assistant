@@ -33,7 +33,7 @@ async def get_llama_response(prompt: str) -> str:
     try:
         print(f"Calling Llama 3 with prompt: '{prompt}'")
         response: Dict[str, Any] = ollama_client.chat(
-            model='llama3',
+            model='llama3.2:latest',
             messages=[{'role': 'user', 'content': prompt}]
         )
         content = response['message']['content']
