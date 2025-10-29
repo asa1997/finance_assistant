@@ -24,7 +24,7 @@ if st.button("Run Promptfoo Tests"):
     try:
         # Run promptfoo and capture output as JSON for easier parsing
         result = subprocess.run(
-            ["promptfoo", "run", "--config", "promptfooconfig.yaml", "--output", "promptfoo_results.json"],
+            ["promptfoo", "redteam", "run", "--config", "promptfooconfig.yaml", "--output", "promptfoo_results.json"],
             capture_output=True,
             text=True,
             check=True # Raise CalledProcessError for non-zero exit codes
